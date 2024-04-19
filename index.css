@@ -1,0 +1,114 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #b28dd1, #9765c4); /* Fondo en tonalidades moradas */
+    color: #fff; /* Color de texto */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #6b238e; /* Morado oscuro para el encabezado */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+}
+
+.producto {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido para los productos */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-right: 20px; /* Espacio entre productos */
+    margin-bottom: 20px;
+    vertical-align: top; /* Alinear al inicio */
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.producto p {
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+.button-container button {
+    background-color: #6b238e; /* Morado oscuro */
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+	
+/* Estilos para el contenedor del carrito */
+#carrito-container {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+/* Estilos para los elementos del carrito */
+#carrito-items {
+    margin-top: 10px;
+}
+
+/* Estilos para el enlace "Ir al carrito" */
+#ir-al-carrito {
+    display: block;
+    margin-top: 10px;
+    color: #fff; /* Color de texto blanco */
+    background-color: #6b238e; /* Morado oscuro para el fondo */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none; /* Quitar subrayado del enlace */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+#ir-al-carrito:hover {
+    background-color: #8551b4; /* Morado más claro al pasar el mouse */
+}
+
+
+   

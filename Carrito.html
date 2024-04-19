@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        /* Estilos para el formulario */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(to right, #b28dd1, #9765c4); /* Fondo en tonalidades moradas */
+            color: #fff; /* Color de texto */
+            line-height: 1.6;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #6b238e; /* Morado oscuro para el botón */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #8551b4; /* Morado más claro al pasar el mouse */
+        }
+    </style>
+    <link href="Carrito.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    
+    <div id="carrito-items">
+        <!-- Aquí se mostrarían los productos del carrito -->
+    </div>
+
+    <form action="procesar_compra.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+
+        <label for="dni">DNI:</label>
+        <input type="number" id="dni" name="dni" required><br>
+
+		
+		 <label for="dni">Metodo de Pago:</label>
+      <select id="pago" name="pago">
+    <option value="efectivo">Efectivo</option>
+    <option value="mercadopago">Mercado Pago</option>
+</select><br>
+
+<div id="brisa-torales" style="display: none;">
+    Alias: Brisa Torales
+</div>
+
+
+        <button type="submit">Comprar</button>
+    </form>
+	
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pagoSelect = document.getElementById('pago');
+        const brisaToralesDiv = document.getElementById('brisa-torales');
+
+        pagoSelect.addEventListener('change', function() {
+            if (pagoSelect.value === 'mercadopago') {
+                brisaToralesDiv.style.display = 'block';
+            } else {
+                brisaToralesDiv.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+	
+</body>
+</html>
+

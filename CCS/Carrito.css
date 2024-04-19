@@ -1,0 +1,48 @@
+/* Estilos para el formulario */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #b28dd1, #9765c4); /* Fondo en tonalidades moradas */
+    color: #fff; /* Color de texto */
+    line-height: 1.6;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #6b238e;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #6b238e; /* Morado oscuro para el botón */
+    color: #b28dd1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8551b4; /* Morado más claro al pasar el mouse */
+}
+
+

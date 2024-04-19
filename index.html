@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Hazbin Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="Pagina2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Poishom</h1>
+        <nav>
+            <ul>
+                <li><a href="#llaveros">Llaveros</a></li>
+                <li><a href="#dibujos">Dibujos</a></li>
+                <li><a href="#cajas">Cajas</a></li>
+                <li><a href="#figuras">Figuras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="llaveros">
+        <h2>Llaveros</h2>
+        <div class="catalogo">
+            <div class="producto">
+                <img src= "Alastor.jpg" alt="Llavero de Hazbin Hotel">
+                <h3>Llavero de Alastor</h3>
+                <p>Precio: $2000.00</p>
+              <div class="button-container">
+                    <button>Añadir al carrito</button>
+                </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="dibujos">
+        <h2>Dibujos</h2>
+        <div class="catalogo">
+            <div class="producto">
+                <img src="lucifer.jpg" alt="Dibujo de Hazbin Hotel">
+                <h3>Dibujo de Lucifer</h3>
+                <p>Precio: $2500.00</p>
+              <div class="button-container">
+                <button>Añadir al carrito</button>
+                </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="figuras">
+        <h2>Figuras</h2>
+        <div class="catalogo">
+            <div class="producto">
+                <img width="200" src="Angel.jpg" alt="Figura de Hazbin Hotel">
+                <h3>Figura de Angel Dust&nbsp; <br>
+                </h3>
+                <p>Precio: $7000.00</p>
+              <div class="button-container">
+                <button>Añadir al carrito</button>
+                </div>
+          </div>
+        </div>
+    </section>
+
+    
+<section id="carrito-container">
+	
+    <h2>Carrito</h2>
+    <div id="carrito-items"></div>
+    <a href="carrito.html">Ir al carrito</a>
+		
+</section>
+	
+	<footer>
+	
+        <p>&copy; 2024 Poishom</p>
+    </footer>
+	
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnsAgregarCarrito = document.querySelectorAll('.button-container button');
+
+        btnsAgregarCarrito.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const producto = btn.closest('.producto');
+                const nombre = producto.querySelector('h3').textContent;
+                const precio = producto.querySelector('p').textContent;
+
+                const carritoItems = document.getElementById('carrito-items');
+                const nuevoItem = document.createElement('div');
+                nuevoItem.classList.add('carrito-item');
+                nuevoItem.innerHTML = `<p>${nombre} - ${precio}</p>`;
+                carritoItems.appendChild(nuevoItem);
+
+                const carritoContainer = document.getElementById('carrito-container');
+                carritoContainer.style.display = 'block';
+            });
+        });
+
+        const btnCerrarCarrito = document.getElementById('cerrar-carrito');
+        btnCerrarCarrito.addEventListener('click', () => {
+            const carritoContainer = document.getElementById('carrito-container');
+            carritoContainer.style.display = 'none';
+        });
+    });
+</script>
+
+	
+</body>
+</html>
